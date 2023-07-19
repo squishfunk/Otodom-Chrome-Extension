@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Otodom extension",
+    "version": "1.0.1",
+    "action": {
+      "default_icon": {
+        "16": "assets/ico.png",
+        "24": "assets/ico.png",
+        "32": "assets/ico.png"
+      },
+      "default_title": "Otodom extension",
+      "default_popup": "popup/popup.html"
+    },
+    "permissions": ["storage", "tabs"],
+    "content_scripts": [
+      {
+        "matches": ["https://*.otodom.pl/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+}
